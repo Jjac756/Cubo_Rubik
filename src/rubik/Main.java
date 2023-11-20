@@ -10,6 +10,6 @@ public class Main {
         System.out.println("\n<|========== CUBO ORDENADO ==========|>\n");
         cubo1.imprimirCubo();
 
-        cubo1.opciones();
+        cubo1.opciones_Categoria();
     } // Fin del main
 } // Fin del paquete

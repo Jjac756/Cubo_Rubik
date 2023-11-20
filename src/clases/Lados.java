@@ -4,18 +4,14 @@ package clases;
 
 TODO Suba aquí el avance 1 de su proyecto. Debe contener los siguientes métodos:
 
-1. ImprimeCubo()
-A1(), A2(), A3()
-B1(), B2(), B3()
-D1(), D2(), D3()
-I1(), I2(), I3().
-RD1(), RD2(), RD3().
-RI1(), RI2(), RI3().
-En el método main() deben ir en forma vertical la llamada a cada método. Solo deben colocar los métodos que funcionan.
-El primer y último método llamado debe ser el ImprimeCubo(), en medio la llamada a los demás métodos, lo cuales deberán colocarse como comentarios.
-
+1. ImprimeCubo() (Hecho)
+A1(), A2(), A3() (Hecho)
+B1(), B2(), B3() (Hecho)
+D1(), D2(), D3() (Hecho)
+I1(), I2(), I3(). (Hecho)
+RD1(), RD2(), RD3(). (Hecho)
+RI1(), RI2(), RI3(). (Hecho)
  */
-
 import java.util.Scanner;
 
 public class Lados {
@@ -26,6 +22,9 @@ public class Lados {
     public static int[][] ladoBlanco_Cara4 = {{0, 0, 0, 0}, {0, 41, 42, 43}, {0, 44, 45, 46}, {0, 47, 48, 49}};
     public static int[][] ladoVerde_Cara5 = {{0, 0, 0, 0}, {0, 51, 52, 53}, {0, 54, 55, 56}, {0, 57, 58, 59}};
     public static int[][] ladoAzul_Cara6 = {{0, 0, 0, 0}, {0, 61, 62, 63}, {0, 64, 65, 66}, {0, 67, 68, 69}};
+
+    private byte respuesta = 0;
+    Scanner leer = new Scanner(System.in);
 
     public static void imprimir(int[][] cara) {
         for (int i = 1; i <= 3; i++) {
@@ -61,6 +60,7 @@ public class Lados {
         imprimir(ladoBlanco_Cara4);
     } // Fin del método imprimirCubo
 
+    // Inicio de los movimientos A
     public static void rotacionDerechaCara6() {
         int variableTemporal = ladoAzul_Cara6[1][3];
         int variableTemporal2 = ladoAzul_Cara6[2][3];
@@ -79,23 +79,47 @@ public class Lados {
 
     } // Fin del método rotacionDerechaCara6 Azul
 
-    public static void rotacioIzquierdaCara5() {
-        int variableTemporal = ladoVerde_Cara5[1][3];
+    public static void rotacionIzquierdaCara5() {
+        int variableTemporal = ladoVerde_Cara5[1][1];
         int variableTemporal2 = ladoVerde_Cara5[2][3];
 
         // Aristas
-        ladoVerde_Cara5[1][3] = ladoVerde_Cara5[1][1];
-        ladoVerde_Cara5[1][1] = ladoVerde_Cara5[3][1];
-        ladoVerde_Cara5[3][1] = ladoVerde_Cara5[3][3];
-        ladoVerde_Cara5[3][3] = variableTemporal;
+        ladoVerde_Cara5[1][1] = ladoVerde_Cara5[1][3];
+        ladoVerde_Cara5[1][3] = ladoVerde_Cara5[3][3];
+        ladoVerde_Cara5[3][3] = ladoVerde_Cara5[3][1];
+        ladoVerde_Cara5[3][1] = variableTemporal;
 
         // Centros
-        ladoVerde_Cara5[2][3] = ladoVerde_Cara5[1][2];
-        ladoVerde_Cara5[1][2] = ladoVerde_Cara5[2][1];
-        ladoVerde_Cara5[2][1] = ladoVerde_Cara5[3][2];
-        ladoVerde_Cara5[3][2] = variableTemporal2;
+        ladoVerde_Cara5[2][3] = ladoVerde_Cara5[3][2];
+        ladoVerde_Cara5[3][2] = ladoVerde_Cara5[2][1];
+        ladoVerde_Cara5[2][1] = ladoVerde_Cara5[1][2];
+        ladoVerde_Cara5[1][2] = variableTemporal2;
 
     } // Fin del método rotacionDerechaCara5 Verde
+
+    public static void movimientoA1() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoRojo_Cara1[i][1];
+
+            ladoRojo_Cara1[i][1] = ladoAmarillo_Cara2[i][1];
+            ladoAmarillo_Cara2[i][1] = ladoNaranja_Cara3[i][1];
+            ladoNaranja_Cara3[i][1] = ladoBlanco_Cara4[i][1];
+            ladoBlanco_Cara4[i][1] = temporal;
+        } // Fin del for
+
+        rotacionIzquierdaCara5();
+    } // Fin del método movimiento A1
+
+    public static void movimientoA2() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoRojo_Cara1[i][2];
+
+            ladoRojo_Cara1[i][2] = ladoAmarillo_Cara2[i][2];
+            ladoAmarillo_Cara2[i][2] = ladoNaranja_Cara3[i][2];
+            ladoNaranja_Cara3[i][2] = ladoBlanco_Cara4[i][2];
+            ladoBlanco_Cara4[i][2] = temporal;
+        } // Fin del for
+    } // Fin del método movimiento A2
 
     public static void movimientoA3() {
 
@@ -109,61 +133,672 @@ public class Lados {
         } // Fin del for
 
         rotacionDerechaCara6();
-        rotacioIzquierdaCara5();
     } // Fin del método movimiento A3
+    // Fin de los Movimientos A
 
-    // TODO Hacer Movimiento A2()
-    public static void movimientoA2() {
-        System.out.println("Pendiente");
-    } // Fin del método movimiento A2
+    // Inicio de los Movimientos B
+    public static void rotacionDerechaCara6_MovimientosB() {
+        int variableTemporal = ladoAzul_Cara6[1][1];
+        int variableTemporal2 = ladoAzul_Cara6[2][3];
 
-    // TODO Hacer movimiento A1
-    public static void movimientoA1() {
-        System.out.println("Pendiente");
-    } // Fin del método movimiento A1
+        // Aristas
+        ladoAzul_Cara6[1][1] = ladoAzul_Cara6[1][3];
+        ladoAzul_Cara6[1][3] = ladoAzul_Cara6[3][3];
+        ladoAzul_Cara6[3][3] = ladoAzul_Cara6[3][1];
+        ladoAzul_Cara6[3][1] = variableTemporal;
 
-    public void opciones() {
-        byte respuesta;
-        Scanner leer = new Scanner(System.in);
+        // Centros
+        ladoAzul_Cara6[2][3] = ladoAzul_Cara6[3][2];
+        ladoAzul_Cara6[3][2] = ladoAzul_Cara6[2][1];
+        ladoAzul_Cara6[2][1] = ladoAzul_Cara6[1][2];
+        ladoAzul_Cara6[1][2] = variableTemporal2;
 
+    } // Fin del método rotacionDerechaCara6_MovimientosB Azul
+
+    public static void rotacionIzquierdaCara5_MovimientosB() {
+        int variableTemporal = ladoVerde_Cara5[1][3];
+        int variableTemporal2 = ladoVerde_Cara5[2][1];
+
+        // Aristas
+        ladoVerde_Cara5[1][3] = ladoVerde_Cara5[1][1];
+        ladoVerde_Cara5[1][1] = ladoVerde_Cara5[3][1];
+        ladoVerde_Cara5[3][1] = ladoVerde_Cara5[3][3];
+        ladoVerde_Cara5[3][3] = variableTemporal;
+
+        // Centros
+        ladoVerde_Cara5[2][1] = ladoVerde_Cara5[3][2];
+        ladoVerde_Cara5[3][2] = ladoVerde_Cara5[2][3];
+        ladoVerde_Cara5[2][3] = ladoVerde_Cara5[1][2];
+        ladoVerde_Cara5[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionDerechaCara5_MovimientosB Verde
+
+    public static void movimientoB1() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoRojo_Cara1[i][1];
+
+            ladoRojo_Cara1[i][1] = ladoBlanco_Cara4[i][1];
+            ladoBlanco_Cara4[i][1] = ladoNaranja_Cara3[i][1];
+            ladoNaranja_Cara3[i][1] = ladoAmarillo_Cara2[i][1];
+            ladoAmarillo_Cara2[i][1] = temporal;
+        } // Fin del for
+
+        rotacionIzquierdaCara5_MovimientosB();
+    } // Fin del método movimiento B1
+
+    public static void movimientoB2() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoRojo_Cara1[i][2];
+
+            ladoRojo_Cara1[i][2] = ladoBlanco_Cara4[i][2];
+            ladoBlanco_Cara4[i][2] = ladoNaranja_Cara3[i][2];
+            ladoNaranja_Cara3[i][2] = ladoAmarillo_Cara2[i][2];
+            ladoAmarillo_Cara2[i][2] = temporal;
+        } // Fin del for
+    } // Fin del método movimiento B2
+
+    public static void movimientoB3() {
+
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoRojo_Cara1[1][i];
+
+            ladoRojo_Cara1[1][i] = ladoVerde_Cara5[1][i];
+            ladoVerde_Cara5[1][i] = ladoNaranja_Cara3[1][i];
+            ladoNaranja_Cara3[1][i] = ladoAzul_Cara6[1][i];
+            ladoAzul_Cara6[1][i] = temporal;
+        } // Fin del for
+
+        rotacionDerechaCara6_MovimientosB();
+    } // Fin del método movimiento B3
+    // Fin de los movimientos B
+
+    //Inicio de los movimientos D
+    public static void rotacionSuperiorCara1_MovimientosD() {
+        int variableTemporal = ladoBlanco_Cara4[1][3];
+        int variableTemporal2 = ladoBlanco_Cara4[2][1];
+
+        // Aristas
+        ladoBlanco_Cara4[1][3] = ladoBlanco_Cara4[1][1];
+        ladoBlanco_Cara4[1][1] = ladoBlanco_Cara4[3][1];
+        ladoBlanco_Cara4[3][1] = ladoBlanco_Cara4[3][3];
+        ladoBlanco_Cara4[3][3] = variableTemporal;
+
+        // Centros
+        ladoBlanco_Cara4[2][1] = ladoBlanco_Cara4[3][2];
+        ladoBlanco_Cara4[3][2] = ladoBlanco_Cara4[2][3];
+        ladoBlanco_Cara4[2][3] = ladoBlanco_Cara4[1][2];
+        ladoBlanco_Cara4[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionSuperiorCara1_MovimientosD Blanco
+
+    public static void rotacionInferiorCara3_MovimientosD() {
+        int variableTemporal = ladoAmarillo_Cara2[1][1];
+        int variableTemporal2 = ladoAmarillo_Cara2[2][3];
+
+        // Aristas
+        ladoAmarillo_Cara2[1][1] = ladoAmarillo_Cara2[1][3];
+        ladoAmarillo_Cara2[1][3] = ladoAmarillo_Cara2[3][3];
+        ladoAmarillo_Cara2[3][3] = ladoAmarillo_Cara2[3][1];
+        ladoAmarillo_Cara2[3][1] = variableTemporal;
+
+        // Centros
+        ladoAmarillo_Cara2[2][3] = ladoAmarillo_Cara2[3][2];
+        ladoAmarillo_Cara2[3][2] = ladoAmarillo_Cara2[2][1];
+        ladoAmarillo_Cara2[2][1] = ladoAmarillo_Cara2[1][2];
+        ladoAmarillo_Cara2[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionInferiorCara3_MovimientosD Amarillo
+
+    public static void movimientoD1() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[1][i];
+
+            ladoVerde_Cara5[1][i] = ladoRojo_Cara1[1][i];
+            ladoRojo_Cara1[1][i] = ladoAzul_Cara6[1][i];
+            ladoAzul_Cara6[1][i] = ladoNaranja_Cara3[1][i];
+            ladoNaranja_Cara3[1][i] = temporal;
+        } // Fin del for
+
+        rotacionSuperiorCara1_MovimientosD();
+    } // Fin del método MovimientoD1
+
+    public static void movimientoD2() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[2][i];
+
+            ladoVerde_Cara5[2][i] = ladoRojo_Cara1[2][i];
+            ladoRojo_Cara1[2][i] = ladoAzul_Cara6[2][i];
+            ladoAzul_Cara6[2][i] = ladoNaranja_Cara3[2][i];
+            ladoNaranja_Cara3[2][i] = temporal;
+        } // Fin del for
+    } // Fin del método MovimientoD2
+
+    public static void movimientoD3() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[3][i];
+
+            ladoVerde_Cara5[3][i] = ladoRojo_Cara1[3][i];
+            ladoRojo_Cara1[3][i] = ladoAzul_Cara6[3][i];
+            ladoAzul_Cara6[3][i] = ladoNaranja_Cara3[3][i];
+            ladoNaranja_Cara3[3][i] = temporal;
+        } // Fin del for
+
+        rotacionInferiorCara3_MovimientosD();
+    } // Fin del método MovimientoD3
+    // Fin de los movimientos D
+
+    //Inicio de los movimientos I
+    public static void rotacionSuperiorCara1_MovimientosI() {
+        int variableTemporal = ladoBlanco_Cara4[1][1];
+        int variableTemporal2 = ladoBlanco_Cara4[2][3];
+
+        // Aristas
+        ladoBlanco_Cara4[1][1] = ladoBlanco_Cara4[1][3];
+        ladoBlanco_Cara4[1][3] = ladoBlanco_Cara4[3][3];
+        ladoBlanco_Cara4[3][3] = ladoBlanco_Cara4[3][1];
+        ladoBlanco_Cara4[3][1] = variableTemporal;
+
+        // Centros
+        ladoBlanco_Cara4[2][3] = ladoBlanco_Cara4[3][2];
+        ladoBlanco_Cara4[3][2] = ladoBlanco_Cara4[2][1];
+        ladoBlanco_Cara4[2][1] = ladoBlanco_Cara4[1][2];
+        ladoBlanco_Cara4[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionSuperiorCara1_MovimientosI Blanco
+
+    public static void rotacionInferiorCara3_MovimientosI() {
+        int variableTemporal = ladoAmarillo_Cara2[1][3];
+        int variableTemporal2 = ladoAmarillo_Cara2[2][1];
+
+        // Aristas
+        ladoAmarillo_Cara2[1][3] = ladoAmarillo_Cara2[1][1];
+        ladoAmarillo_Cara2[1][1] = ladoAmarillo_Cara2[3][1];
+        ladoAmarillo_Cara2[3][1] = ladoAmarillo_Cara2[3][3];
+        ladoAmarillo_Cara2[3][3] = variableTemporal;
+
+        // Centros
+        ladoAmarillo_Cara2[2][1] = ladoAmarillo_Cara2[3][2];
+        ladoAmarillo_Cara2[3][2] = ladoAmarillo_Cara2[2][3];
+        ladoAmarillo_Cara2[2][3] = ladoAmarillo_Cara2[1][2];
+        ladoAmarillo_Cara2[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionInferiorCara3_MovimientosI Amarillo    
+
+    public static void movimientoI1() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[1][i];
+
+            ladoVerde_Cara5[1][i] = ladoNaranja_Cara3[1][i];
+            ladoNaranja_Cara3[1][i] = ladoAzul_Cara6[1][i];
+            ladoAzul_Cara6[1][i] = ladoRojo_Cara1[1][i];
+            ladoRojo_Cara1[1][i] = temporal;
+        } // Fin del for
+
+        rotacionSuperiorCara1_MovimientosI();
+    } // Fin del método MovimientoI1
+
+    public static void movimientoI2() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[2][i];
+
+            ladoVerde_Cara5[2][i] = ladoNaranja_Cara3[2][i];
+            ladoNaranja_Cara3[2][i] = ladoAzul_Cara6[2][i];
+            ladoAzul_Cara6[2][i] = ladoRojo_Cara1[2][i];
+            ladoRojo_Cara1[2][i] = temporal;
+        } // Fin del for
+    } // Fin del método MovimientoI2
+
+    public static void movimientoI3() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[3][i];
+
+            ladoVerde_Cara5[3][i] = ladoNaranja_Cara3[3][i];
+            ladoNaranja_Cara3[3][i] = ladoAzul_Cara6[3][i];
+            ladoAzul_Cara6[3][i] = ladoRojo_Cara1[3][i];
+            ladoRojo_Cara1[3][i] = temporal;
+        } // Fin del for
+
+        rotacionInferiorCara3_MovimientosI();
+    } // Fin del método MovimientoI3
+    // Fin de los movimientos I
+
+    // Inicio Movimientos RD
+    public static void rotacionSuperiorCara1_MovimientosRD() {
+        int variableTemporal = ladoRojo_Cara1[1][3];
+        int variableTemporal2 = ladoRojo_Cara1[2][1];
+
+        // Aristas
+        ladoRojo_Cara1[1][3] = ladoRojo_Cara1[1][1];
+        ladoRojo_Cara1[1][1] = ladoRojo_Cara1[3][1];
+        ladoRojo_Cara1[3][1] = ladoRojo_Cara1[3][3];
+        ladoRojo_Cara1[3][3] = variableTemporal;
+
+        // Centros
+        ladoRojo_Cara1[2][1] = ladoRojo_Cara1[3][2];
+        ladoRojo_Cara1[3][2] = ladoRojo_Cara1[2][3];
+        ladoRojo_Cara1[2][3] = ladoRojo_Cara1[1][2];
+        ladoRojo_Cara1[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionSuperiorCara1_MovimientosRD Rojo
+
+    public static void rotacionInferiorCara3_MovimientosRD() {
+        int variableTemporal = ladoNaranja_Cara3[1][1];
+        int variableTemporal2 = ladoNaranja_Cara3[2][3];
+
+        // Aristas
+        ladoNaranja_Cara3[1][1] = ladoNaranja_Cara3[1][3];
+        ladoNaranja_Cara3[1][3] = ladoNaranja_Cara3[3][3];
+        ladoNaranja_Cara3[3][3] = ladoNaranja_Cara3[3][1];
+        ladoNaranja_Cara3[3][1] = variableTemporal;
+
+        // Centros
+        ladoNaranja_Cara3[2][3] = ladoNaranja_Cara3[3][2];
+        ladoNaranja_Cara3[3][2] = ladoNaranja_Cara3[2][1];
+        ladoNaranja_Cara3[2][1] = ladoNaranja_Cara3[1][2];
+        ladoNaranja_Cara3[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionInferiorCara3_MovimientosRD Naranja
+
+    public static void movimientoRD1() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[1][i];
+
+            ladoVerde_Cara5[1][i] = ladoAmarillo_Cara2[1][i];
+            ladoAmarillo_Cara2[1][i] = ladoAzul_Cara6[1][i];
+            ladoAzul_Cara6[1][i] = ladoBlanco_Cara4[1][i];
+            ladoBlanco_Cara4[1][i] = temporal;
+        } // Fin del for
+
+        rotacionSuperiorCara1_MovimientosRD();
+    } // Fin de los movimientos RD1
+
+    public static void movimientoRD2() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[2][i];
+
+            ladoVerde_Cara5[2][i] = ladoAmarillo_Cara2[2][i];
+            ladoAmarillo_Cara2[2][i] = ladoAzul_Cara6[2][i];
+            ladoAzul_Cara6[2][i] = ladoBlanco_Cara4[2][i];
+            ladoBlanco_Cara4[2][i] = temporal;
+        } // Fin del for
+    } // Fin del método Movimiento RD2  
+
+    public static void movimientoRD3() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[3][i];
+
+            ladoVerde_Cara5[3][i] = ladoAmarillo_Cara2[3][i];
+            ladoAmarillo_Cara2[3][i] = ladoAzul_Cara6[3][i];
+            ladoAzul_Cara6[3][i] = ladoBlanco_Cara4[3][i];
+            ladoBlanco_Cara4[3][i] = temporal;
+        } // Fin del for
+
+        rotacionInferiorCara3_MovimientosRD();
+    } // Fin del método Movimiento RD3
+    // Fin de los movimientos RD
+
+    // Inicio de los movimientos RI
+    public static void rotacionSuperiorCara1_MovimientosRI() {
+        int variableTemporal = ladoRojo_Cara1[1][1];
+        int variableTemporal2 = ladoRojo_Cara1[2][3];
+
+        // Aristas
+        ladoRojo_Cara1[1][1] = ladoRojo_Cara1[1][3];
+        ladoRojo_Cara1[1][3] = ladoRojo_Cara1[3][3];
+        ladoRojo_Cara1[3][3] = ladoRojo_Cara1[3][1];
+        ladoRojo_Cara1[3][1] = variableTemporal;
+
+        // Centros
+        ladoRojo_Cara1[2][3] = ladoRojo_Cara1[3][2];
+        ladoRojo_Cara1[3][2] = ladoRojo_Cara1[2][1];
+        ladoRojo_Cara1[2][1] = ladoRojo_Cara1[1][2];
+        ladoRojo_Cara1[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionSuperiorCara1_MovimientosRI Rojo
+
+    public static void rotacionInferiorCara3_MovimientosRI() {
+        int variableTemporal = ladoNaranja_Cara3[1][3];
+        int variableTemporal2 = ladoNaranja_Cara3[2][1];
+
+        // Aristas
+        ladoNaranja_Cara3[1][3] = ladoNaranja_Cara3[1][1];
+        ladoNaranja_Cara3[1][1] = ladoNaranja_Cara3[3][1];
+        ladoNaranja_Cara3[3][1] = ladoNaranja_Cara3[3][3];
+        ladoNaranja_Cara3[3][3] = variableTemporal;
+
+        // Centros
+        ladoNaranja_Cara3[2][1] = ladoNaranja_Cara3[3][2];
+        ladoNaranja_Cara3[3][2] = ladoNaranja_Cara3[2][3];
+        ladoNaranja_Cara3[2][3] = ladoNaranja_Cara3[1][2];
+        ladoNaranja_Cara3[1][2] = variableTemporal2;
+
+    } // Fin del método rotacionInferiorCara3_MovimientosRI Naranja    
+
+    public static void movimientoRI1() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[1][i];
+
+            ladoVerde_Cara5[1][i] = ladoBlanco_Cara4[1][i];
+            ladoBlanco_Cara4[1][i] = ladoAzul_Cara6[1][i];
+            ladoAzul_Cara6[1][i] = ladoAmarillo_Cara2[1][i];
+            ladoAmarillo_Cara2[1][i] = temporal;
+        } // Fin del for
+
+        rotacionSuperiorCara1_MovimientosRI();
+    } // Fin del método MovimientoI1
+
+    public static void movimientoRI2() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[2][i];
+
+            ladoVerde_Cara5[2][i] = ladoBlanco_Cara4[2][i];
+            ladoBlanco_Cara4[2][i] = ladoAzul_Cara6[2][i];
+            ladoAzul_Cara6[2][i] = ladoAmarillo_Cara2[2][i];
+            ladoAmarillo_Cara2[2][i] = temporal;
+        } // Fin del for
+    } // Fin del método MovimientoRI2
+
+    public static void movimientoRI3() {
+        for (int i = 1; i <= 3; i++) {
+            int temporal = ladoVerde_Cara5[3][i];
+
+            ladoVerde_Cara5[3][i] = ladoBlanco_Cara4[3][i];
+            ladoBlanco_Cara4[3][i] = ladoAzul_Cara6[3][i];
+            ladoAzul_Cara6[3][i] = ladoAmarillo_Cara2[3][i];
+            ladoAmarillo_Cara2[3][i] = temporal;
+        } // Fin del for
+
+        rotacionInferiorCara3_MovimientosRI();
+    } // Fin del método MovimientoRI3
+    // Fin de los movimientos RI    
+
+    public static void mensaje() {
+        System.out.println("\n<|========== CUBO ACTUAL ==========|>\n");
+        imprimirCubo();
+    } // Fin del método Mensaje
+
+    public void opciones_MovimientosA() {
         OUTER:
         while (true) {
             System.out.println("\n<|========== ELIGE MOVIMIENTOS ==========|>\n");
-            System.out.println("0) Mostrar Cubo \n1) Movimiento A1 \n2) Movimiento A2 \n3) Movimiento A3 \n4) Salir  \nRespuesta: ");
+            System.out.println("0) Volver \n1) Movimiento A1 \n2) Movimiento A2 \n3) Movimiento A3 \n4) Imprimir Cubo \nRespuesta: ");
             respuesta = leer.nextByte();
 
             switch (respuesta) {
                 case 0:
-                    imprimirCubo();
-                    break;
+                    break OUTER;
 
                 case 1:
                     movimientoA1();
-                    System.out.println("\n<|========== CUBO ACTUAL ==========|>\n");
-                    imprimirCubo();
+                    mensaje();
                     break;
 
                 case 2:
                     movimientoA2();
-                    System.out.println("\n<|========== CUBO ACTUAL ==========|>\n");
-                    imprimirCubo();
+                    mensaje();
                     break;
 
                 case 3:
                     movimientoA3();
-                    System.out.println("\n<|========== CUBO ACTUAL ==========|>\n");
-                    imprimirCubo();
+                    mensaje();
                     break;
 
                 case 4:
-                    System.out.println("Hasta Pronto!");
-                    break OUTER;
+                    imprimirCubo();
+                    break;
+                    
+                default:
+                    System.out.println("Error! La opción ingresada no existe!");
+                    break;
+            }
+        }
+
+    } // Fin del método opciones_MovimientosA
+
+    public void opciones_MovimientosB() {
+        OUTER:
+        while (true) {
+            System.out.println("\n<|========== ELIGE MOVIMIENTOS ==========|>\n");
+            System.out.println("0) Volver \n1) Movimiento B1 \n2) Movimiento B2 \n3) Movimiento B3 \n4) Imprimir Cubo \nRespuesta: ");
+            respuesta = leer.nextByte();
+
+            switch (respuesta) {
+                case 0:
+                    break OUTER;  
+
+                case 1:
+                    movimientoB1();
+                    mensaje();
+                    break;
+
+                case 2:
+                    movimientoB2();
+                    mensaje();
+                    break;
+
+                case 3:
+                    movimientoB3();
+                    mensaje();
+                    break;
+
+                case 4:
+                    imprimirCubo();
+                    break;
+                    
+                case 5:
+                    opciones_Categoria();
+                    break;     
 
                 default:
                     System.out.println("Error! La opción ingresada no existe!");
                     break;
-            } // Fin del switch
-        } // Fin del While
+            }
+        }
 
-    } // Fin de método opciones
+    } // Fin del método opciones_MovimientosB    
+
+    public void opciones_MovimientosD() {
+        OUTER:
+        while (true) {
+            System.out.println("\n<|========== ELIGE MOVIMIENTOS ==========|>\n");
+            System.out.println("0) Volver \n1) Movimiento D1 \n2) Movimiento D2 \n3) Movimiento D3 \n4) Imprimir Cubo \nRespuesta: ");
+            respuesta = leer.nextByte();
+
+            switch (respuesta) {
+                case 0:
+                    break OUTER;
+
+                case 1:
+                    movimientoD1();
+                    mensaje();
+                    break;
+
+                case 2:
+                    movimientoD2();
+                    mensaje();
+                    break;
+
+                case 3:
+                    movimientoD3();
+                    mensaje();
+                    break;
+
+                case 4:
+                    imprimirCubo();
+                    break;  
+
+                default:
+                    System.out.println("Error! La opción ingresada no existe!");
+                    break;
+            }
+        }
+
+    } // Fin del método opciones_MovimientosD   
+
+    public void opciones_MovimientosI() {
+        OUTER:
+        while (true) {
+            System.out.println("\n<|========== ELIGE MOVIMIENTOS ==========|>\n");
+            System.out.println("0) Volver \n1) Movimiento I1 \n2) Movimiento I2 \n3) Movimiento I3 \n4) Imprimir Cubo \nRespuesta: ");
+            respuesta = leer.nextByte();
+
+            switch (respuesta) {
+                case 0:
+                    break OUTER;
+
+                case 1:
+                    movimientoI1();
+                    mensaje();
+                    break;
+
+                case 2:
+                    movimientoI2();
+                    mensaje();
+                    break;
+
+                case 3:
+                    movimientoI3();
+                    mensaje();
+                    break;
+
+                case 4:
+                    imprimirCubo();
+                    break;
+                
+                case 5:
+                    opciones_Categoria();
+                    break;        
+
+                default:
+                    System.out.println("Error! La opción ingresada no existe!");
+                    break;
+            }
+        }
+
+    } // Fin del método opciones_MovimientosD   
+
+    public void opciones_MovimientosRD() {
+        OUTER:
+        while (true) {
+            System.out.println("\n<|========== ELIGE MOVIMIENTOS ==========|>\n");
+            System.out.println("0) Volver \n1) Movimiento RD1 \n2) Movimiento RD2 \n3) Movimiento RD3 \n4) Imprimir Cubo \nRespuesta: ");
+            respuesta = leer.nextByte();
+
+            switch (respuesta) {
+                case 0:
+                    break OUTER;
+
+                case 1:
+                    movimientoRD1();
+                    mensaje();
+                    break;
+
+                case 2:
+                    movimientoRD2();
+                    mensaje();
+                    break;
+
+                case 3:
+                    movimientoRD3();
+                    mensaje();
+                    break;
+
+                case 4:
+                    imprimirCubo();
+                    break;
+
+                default:
+                    System.out.println("Error! La opción ingresada no existe!");
+                    break;
+            }
+        }
+
+    } // Fin del método opciones_MovimientosRD   
+
+    public void opciones_MovimientosRI() {
+        OUTER:
+        while (true) {
+            System.out.println("\n<|========== ELIGE MOVIMIENTOS ==========|>\n");
+            System.out.println("0) Volver \n1) Movimiento RI1 \n2) Movimiento RI2 \n3) Movimiento RI3 \n4) Imprimir Cubo \nRespuesta: ");
+            respuesta = leer.nextByte();
+
+            switch (respuesta) {
+                case 0:
+                    break OUTER;
+
+                case 1:
+                    movimientoRI1();
+                    mensaje();
+                    break;
+
+                case 2:
+                    movimientoRI2();
+                    mensaje();
+                    break;
+
+                case 3:
+                    movimientoRI3();
+                    mensaje();
+                    break;
+
+                case 4:
+                    imprimirCubo();
+                    break;
+
+                default:
+                    System.out.println("Error! La opción ingresada no existe!");
+                    break;
+            }
+        }
+
+    } // Fin del método opciones_MovimientosRI       
+
+    public void opciones_Categoria() {
+        OUTER:
+        while (true) {
+            System.out.println("\n<|========== ELIGE Categoría ==========|>\n");
+            System.out.println("0) Salir \n1) Movimientos A \n2) Movimientos B \n3) Movimientos D \n4) Movimientos I"
+                    + "\n5) Movimientos RD \n6) Movimientos RI \n7) Imprimir Cubo \nRespuesta: ");
+            respuesta = leer.nextByte();
+
+            switch (respuesta) {
+                case 0:
+                    System.out.println("Hasta Pronto!");
+                    break OUTER;
+
+                case 1:
+                    opciones_MovimientosA();
+                    break;
+
+                case 2:
+                    opciones_MovimientosB();
+                    break;
+
+                case 3:
+                    opciones_MovimientosD();
+                    break;
+
+                case 4:
+                    opciones_MovimientosI();
+                    break;
+
+                case 5:
+                    opciones_MovimientosRD();
+                    break;
+
+                case 6:
+                    opciones_MovimientosRI();
+                    break;
+
+                case 7:
+                    imprimirCubo();
+                    break;
+
+                default:
+                    System.out.println("Error! La opción ingresada no existe!");
+                    break;
+            } // Fin del switch            
+        }
+    } // Fin del método opciones_Movimientos
+
 } // Fin de la clase Lados
