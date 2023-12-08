@@ -8,7 +8,7 @@ public class Main {
         Lados cubo1 = new Lados();
 
         System.out.println("\n<|========== CUBO ORDENADO ==========|>\n");
-        cubo1.imprimirCubo();
+        Lados.imprimirCubo();
 
         cubo1.opciones_Categoria();
     } // Fin del main
