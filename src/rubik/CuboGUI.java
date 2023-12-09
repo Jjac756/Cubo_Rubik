@@ -448,6 +448,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoAzul_Cara6[2][1] = ladoAzul_Cara6[3][2];
         ladoAzul_Cara6[3][2] = variableTemporal2;
 
+        // Color
+        Color color_variableTemporal = color_ladoAzul_Cara6[1][3];
+        Color color_variableTemporal2 = color_ladoAzul_Cara6[2][3];
+
+        // Aristas
+        color_ladoAzul_Cara6[1][3] = color_ladoAzul_Cara6[1][1];
+        color_ladoAzul_Cara6[1][1] = color_ladoAzul_Cara6[3][1];
+        color_ladoAzul_Cara6[3][1] = color_ladoAzul_Cara6[3][3];
+        color_ladoAzul_Cara6[3][3] = color_variableTemporal;
+
+        // Centros
+        color_ladoAzul_Cara6[2][3] = color_ladoAzul_Cara6[1][2];
+        color_ladoAzul_Cara6[1][2] = color_ladoAzul_Cara6[2][1];
+        color_ladoAzul_Cara6[2][1] = color_ladoAzul_Cara6[3][2];
+        color_ladoAzul_Cara6[3][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionDerechaCara6 Azul
 
@@ -466,6 +482,21 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoVerde_Cara5[3][2] = ladoVerde_Cara5[2][1];
         ladoVerde_Cara5[2][1] = ladoVerde_Cara5[1][2];
         ladoVerde_Cara5[1][2] = variableTemporal2;
+
+        Color color_variableTemporal = color_ladoVerde_Cara5[1][1];
+        Color color_variableTemporal2 = color_ladoVerde_Cara5[2][3];
+
+        // Aristas
+        color_ladoVerde_Cara5[1][1] = color_ladoVerde_Cara5[1][3];
+        color_ladoVerde_Cara5[1][3] = color_ladoVerde_Cara5[3][3];
+        color_ladoVerde_Cara5[3][3] = color_ladoVerde_Cara5[3][1];
+        color_ladoVerde_Cara5[3][1] = color_variableTemporal;
+
+        // Centros
+        color_ladoVerde_Cara5[2][3] = color_ladoVerde_Cara5[3][2];
+        color_ladoVerde_Cara5[3][2] = color_ladoVerde_Cara5[2][1];
+        color_ladoVerde_Cara5[2][1] = color_ladoVerde_Cara5[1][2];
+        color_ladoVerde_Cara5[1][2] = color_variableTemporal2;
 
         activarContadores();
     } // Fin del método rotacionDerechaCara5 Verde
@@ -553,6 +584,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoAzul_Cara6[2][1] = ladoAzul_Cara6[1][2];
         ladoAzul_Cara6[1][2] = variableTemporal2;
 
+        // Colores
+        Color color_variableTemporal = color_ladoAzul_Cara6[1][1];
+        Color color_variableTemporal2 = color_ladoAzul_Cara6[2][3];
+
+        // Aristas
+        color_ladoAzul_Cara6[1][1] = color_ladoAzul_Cara6[1][3];
+        color_ladoAzul_Cara6[1][3] = color_ladoAzul_Cara6[3][3];
+        color_ladoAzul_Cara6[3][3] = color_ladoAzul_Cara6[3][1];
+        color_ladoAzul_Cara6[3][1] = color_variableTemporal;
+
+        // Centros
+        color_ladoAzul_Cara6[2][3] = color_ladoAzul_Cara6[3][2];
+        color_ladoAzul_Cara6[3][2] = color_ladoAzul_Cara6[2][1];
+        color_ladoAzul_Cara6[2][1] = color_ladoAzul_Cara6[1][2];
+        color_ladoAzul_Cara6[1][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionDerechaCara6_MovimientosB Azul
 
@@ -571,6 +618,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoVerde_Cara5[3][2] = ladoVerde_Cara5[2][3];
         ladoVerde_Cara5[2][3] = ladoVerde_Cara5[1][2];
         ladoVerde_Cara5[1][2] = variableTemporal2;
+
+        // Colores
+        Color color_variableTemporal = color_ladoVerde_Cara5[1][3];
+        Color color_variableTemporal2 = color_ladoVerde_Cara5[2][1];
+
+        // Aristas
+        color_ladoVerde_Cara5[1][3] = color_ladoVerde_Cara5[1][1];
+        color_ladoVerde_Cara5[1][1] = color_ladoVerde_Cara5[3][1];
+        color_ladoVerde_Cara5[3][1] = color_ladoVerde_Cara5[3][3];
+        color_ladoVerde_Cara5[3][3] = color_variableTemporal;
+
+        // Centros
+        color_ladoVerde_Cara5[2][1] = color_ladoVerde_Cara5[3][2];
+        color_ladoVerde_Cara5[3][2] = color_ladoVerde_Cara5[2][3];
+        color_ladoVerde_Cara5[2][3] = color_ladoVerde_Cara5[1][2];
+        color_ladoVerde_Cara5[1][2] = color_variableTemporal2;
 
         activarContadores();
     } // Fin del método rotacionDerechaCara5_MovimientosB Verde
@@ -658,6 +721,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoRojo_Cara1[2][3] = ladoRojo_Cara1[1][2];
         ladoRojo_Cara1[1][2] = variableTemporal2;
 
+        // Colores
+        Color color_variableTemporal = color_ladoRojo_Cara1[1][3];
+        Color color_variableTemporal2 = color_ladoRojo_Cara1[2][1];
+
+        // Aristas
+        color_ladoRojo_Cara1[1][3] = color_ladoRojo_Cara1[1][1];
+        color_ladoRojo_Cara1[1][1] = color_ladoRojo_Cara1[3][1];
+        color_ladoRojo_Cara1[3][1] = color_ladoRojo_Cara1[3][3];
+        color_ladoRojo_Cara1[3][3] = color_variableTemporal;
+
+        // Centros
+        color_ladoRojo_Cara1[2][1] = color_ladoRojo_Cara1[3][2];
+        color_ladoRojo_Cara1[3][2] = color_ladoRojo_Cara1[2][3];
+        color_ladoRojo_Cara1[2][3] = color_ladoRojo_Cara1[1][2];
+        color_ladoRojo_Cara1[1][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionSuperiorCara1_MovimientosI Blanco
 
@@ -676,6 +755,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoNaranja_Cara3[3][2] = ladoNaranja_Cara3[2][1];
         ladoNaranja_Cara3[2][1] = ladoNaranja_Cara3[1][2];
         ladoNaranja_Cara3[1][2] = variableTemporal2;
+
+        // Colores
+        Color color_variableTemporal = color_ladoNaranja_Cara3[1][1];
+        Color color_variableTemporal2 = color_ladoNaranja_Cara3[2][3];
+
+        // Aristas
+        color_ladoNaranja_Cara3[1][1] = color_ladoNaranja_Cara3[1][3];
+        color_ladoNaranja_Cara3[1][3] = color_ladoNaranja_Cara3[3][3];
+        color_ladoNaranja_Cara3[3][3] = color_ladoNaranja_Cara3[3][1];
+        color_ladoNaranja_Cara3[3][1] = color_variableTemporal;
+
+        // Centros
+        color_ladoNaranja_Cara3[2][3] = color_ladoNaranja_Cara3[3][2];
+        color_ladoNaranja_Cara3[3][2] = color_ladoNaranja_Cara3[2][1];
+        color_ladoNaranja_Cara3[2][1] = color_ladoNaranja_Cara3[1][2];
+        color_ladoNaranja_Cara3[1][2] = color_variableTemporal2;
 
         activarContadores();
     } // Fin del método rotacionInferiorCara3_MovimientosI Amarillo
@@ -763,6 +858,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoRojo_Cara1[2][1] = ladoRojo_Cara1[1][2];
         ladoRojo_Cara1[1][2] = variableTemporal2;
 
+        // Colores
+        Color color_variableTemporal = color_ladoRojo_Cara1[1][1];
+        Color color_variableTemporal2 = color_ladoRojo_Cara1[2][3];
+
+        // Aristas
+        color_ladoRojo_Cara1[1][1] = color_ladoRojo_Cara1[1][3];
+        color_ladoRojo_Cara1[1][3] = color_ladoRojo_Cara1[3][3];
+        color_ladoRojo_Cara1[3][3] = color_ladoRojo_Cara1[3][1];
+        color_ladoRojo_Cara1[3][1] = color_variableTemporal;
+
+        // Centros
+        color_ladoRojo_Cara1[2][3] = color_ladoRojo_Cara1[3][2];
+        color_ladoRojo_Cara1[3][2] = color_ladoRojo_Cara1[2][1];
+        color_ladoRojo_Cara1[2][1] = color_ladoRojo_Cara1[1][2];
+        color_ladoRojo_Cara1[1][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionSuperiorCara1_MovimientosD Blanco
 
@@ -781,6 +892,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoNaranja_Cara3[3][2] = ladoNaranja_Cara3[2][3];
         ladoNaranja_Cara3[2][3] = ladoNaranja_Cara3[1][2];
         ladoNaranja_Cara3[1][2] = variableTemporal2;
+
+        // Colores
+        Color color_variableTemporal = color_ladoNaranja_Cara3[1][3];
+        Color color_variableTemporal2 = color_ladoNaranja_Cara3[2][1];
+
+        // Aristas
+        color_ladoNaranja_Cara3[1][3] = color_ladoNaranja_Cara3[1][1];
+        color_ladoNaranja_Cara3[1][1] = color_ladoNaranja_Cara3[3][1];
+        color_ladoNaranja_Cara3[3][1] = color_ladoNaranja_Cara3[3][3];
+        color_ladoNaranja_Cara3[3][3] = color_variableTemporal;
+
+        // Centros
+        color_ladoNaranja_Cara3[2][1] = color_ladoNaranja_Cara3[3][2];
+        color_ladoNaranja_Cara3[3][2] = color_ladoNaranja_Cara3[2][3];
+        color_ladoNaranja_Cara3[2][3] = color_ladoNaranja_Cara3[1][2];
+        color_ladoNaranja_Cara3[1][2] = color_variableTemporal2;
 
         activarContadores();
     } // Fin del método rotacionInferiorCara3_MovimientosD Amarillo    
@@ -868,6 +995,20 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoAmarillo_Cara2[2][3] = ladoAmarillo_Cara2[1][2];
         ladoAmarillo_Cara2[1][2] = variableTemporal2;
 
+        Color color_variableTemporal = color_ladoAmarillo_Cara2[1][3];
+        Color color_variableTemporal2 = color_ladoAmarillo_Cara2[2][1];
+
+        // Aristas
+        color_ladoAmarillo_Cara2[1][3] = color_ladoAmarillo_Cara2[1][1];
+        color_ladoAmarillo_Cara2[1][1] = color_ladoAmarillo_Cara2[3][1];
+        color_ladoAmarillo_Cara2[3][1] = color_ladoAmarillo_Cara2[3][3];
+        color_ladoAmarillo_Cara2[3][3] = color_variableTemporal;
+
+        // Centros
+        color_ladoAmarillo_Cara2[2][1] = color_ladoAmarillo_Cara2[3][2];
+        color_ladoAmarillo_Cara2[3][2] = color_ladoAmarillo_Cara2[2][3];
+        color_ladoAmarillo_Cara2[2][3] = color_ladoAmarillo_Cara2[1][2];
+        color_ladoAmarillo_Cara2[1][2] = color_variableTemporal2;
         activarContadores();
     } // Fin del método rotacionSuperiorCara1_MovimientosRD Rojo
 
@@ -887,68 +1028,178 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoBlanco_Cara4[2][1] = ladoBlanco_Cara4[1][2];
         ladoBlanco_Cara4[1][2] = variableTemporal2;
 
+        // Colores
+        Color color_variableTemporal = color_ladoBlanco_Cara4[1][1];
+        Color color_variableTemporal2 = color_ladoBlanco_Cara4[2][3];
+
+        // Aristas
+        color_ladoBlanco_Cara4[1][1] = color_ladoBlanco_Cara4[1][3];
+        color_ladoBlanco_Cara4[1][3] = color_ladoBlanco_Cara4[3][3];
+        color_ladoBlanco_Cara4[3][3] = color_ladoBlanco_Cara4[3][1];
+        color_ladoBlanco_Cara4[3][1] = color_variableTemporal;
+
+        // Centros
+        color_ladoBlanco_Cara4[2][3] = color_ladoBlanco_Cara4[3][2];
+        color_ladoBlanco_Cara4[3][2] = color_ladoBlanco_Cara4[2][1];
+        color_ladoBlanco_Cara4[2][1] = color_ladoBlanco_Cara4[1][2];
+        color_ladoBlanco_Cara4[1][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionInferiorCara3_MovimientosRD Naranja
 
     public void movimientoRD1() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][3];
-            Color color_temporal = color_ladoVerde_Cara5[i][3];
+        int temporal1 = ladoRojo_Cara1[3][3];
+        int temporal2 = ladoRojo_Cara1[3][2];
+        int temporal3 = ladoRojo_Cara1[3][1];
 
-            // Números
-            ladoVerde_Cara5[i][3] = ladoNaranja_Cara3[1][i];
-            ladoNaranja_Cara3[1][i] = ladoAzul_Cara6[i][1];
-            ladoAzul_Cara6[i][1] = ladoRojo_Cara1[3][i];
-            ladoRojo_Cara1[3][i] = temporal;
+        Color color_temporal1 = color_ladoRojo_Cara1[3][3];
+        Color color_temporal2 = color_ladoRojo_Cara1[3][2];
+        Color color_temporal3 = color_ladoRojo_Cara1[3][1];
 
-            // Color
-            color_ladoVerde_Cara5[i][3] = color_ladoNaranja_Cara3[1][i];
-            color_ladoNaranja_Cara3[1][i] = color_ladoAzul_Cara6[i][1];
-            color_ladoAzul_Cara6[i][1] = color_ladoRojo_Cara1[3][i];
-            color_ladoRojo_Cara1[3][i] = color_temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Verde
+        ladoRojo_Cara1[3][3] = ladoVerde_Cara5[1][3];
+        ladoRojo_Cara1[3][2] = ladoVerde_Cara5[2][3];
+        ladoRojo_Cara1[3][1] = ladoVerde_Cara5[3][3];
+
+        // Números. Lado Verde y Naranja
+        ladoVerde_Cara5[3][3] = ladoNaranja_Cara3[1][3];
+        ladoVerde_Cara5[2][3] = ladoNaranja_Cara3[1][2];
+        ladoVerde_Cara5[1][3] = ladoNaranja_Cara3[1][1];
+
+        // Números. Lado Naranja y Azul
+        ladoNaranja_Cara3[1][1] = ladoAzul_Cara6[3][1];
+        ladoNaranja_Cara3[1][2] = ladoAzul_Cara6[2][1];
+        ladoNaranja_Cara3[1][3] = ladoAzul_Cara6[1][1];
+
+        // Números. Lado Azul y Variable Temporal
+        ladoAzul_Cara6[3][1] = temporal1;
+        ladoAzul_Cara6[2][1] = temporal2;
+        ladoAzul_Cara6[1][1] = temporal3;
+
+        // Colores. Lado Rojo y Verde
+        color_ladoRojo_Cara1[3][3] = color_ladoVerde_Cara5[1][3];
+        color_ladoRojo_Cara1[3][2] = color_ladoVerde_Cara5[2][3];
+        color_ladoRojo_Cara1[3][1] = color_ladoVerde_Cara5[3][3];
+
+        // Colores. Lado Verde y Naranja
+        color_ladoVerde_Cara5[3][3] = color_ladoNaranja_Cara3[1][3];
+        color_ladoVerde_Cara5[2][3] = color_ladoNaranja_Cara3[1][2];
+        color_ladoVerde_Cara5[1][3] = color_ladoNaranja_Cara3[1][1];
+
+        // Colores. Lado Naranja y Azul
+        color_ladoNaranja_Cara3[1][1] = color_ladoAzul_Cara6[3][1];
+        color_ladoNaranja_Cara3[1][2] = color_ladoAzul_Cara6[2][1];
+        color_ladoNaranja_Cara3[1][3] = color_ladoAzul_Cara6[1][1];
+
+        // Colores. Lado Azul y Variable Temporal
+        color_ladoAzul_Cara6[3][1] = color_temporal1;
+        color_ladoAzul_Cara6[2][1] = color_temporal2;
+        color_ladoAzul_Cara6[1][1] = color_temporal3;
 
         rotacionSuperiorCara1_MovimientosRD();
         activarContadores();
     } // Fin de los movimientos RD1
 
     public void movimientoRD2() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][2];
-            Color color_temporal = color_ladoVerde_Cara5[i][2];
+        int temporal1 = ladoRojo_Cara1[2][3];
+        int temporal2 = ladoRojo_Cara1[2][2];
+        int temporal3 = ladoRojo_Cara1[2][1];
 
-            // Números
-            ladoVerde_Cara5[i][2] = ladoNaranja_Cara3[2][i];
-            ladoNaranja_Cara3[2][i] = ladoAzul_Cara6[i][2];
-            ladoAzul_Cara6[i][2] = ladoRojo_Cara1[2][i];
-            ladoRojo_Cara1[2][i] = temporal;
+        Color color_temporal1 = color_ladoRojo_Cara1[2][3];
+        Color color_temporal2 = color_ladoRojo_Cara1[2][2];
+        Color color_temporal3 = color_ladoRojo_Cara1[2][1];
 
-            // Color
-            color_ladoVerde_Cara5[i][2] = color_ladoNaranja_Cara3[2][i];
-            color_ladoNaranja_Cara3[2][i] = color_ladoAzul_Cara6[i][2];
-            color_ladoAzul_Cara6[i][2] = color_ladoRojo_Cara1[2][i];
-            color_ladoRojo_Cara1[2][i] = color_temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Verde
+        ladoRojo_Cara1[2][3] = ladoVerde_Cara5[1][2];
+        ladoRojo_Cara1[2][2] = ladoVerde_Cara5[2][2];
+        ladoRojo_Cara1[2][1] = ladoVerde_Cara5[3][2];
+
+        // Números. Lado Verde y Naranja
+        ladoVerde_Cara5[3][2] = ladoNaranja_Cara3[2][3];
+        ladoVerde_Cara5[2][2] = ladoNaranja_Cara3[2][2];
+        ladoVerde_Cara5[1][2] = ladoNaranja_Cara3[2][1];
+
+        // Números. Lado Naranja y Azul
+        ladoNaranja_Cara3[2][1] = ladoAzul_Cara6[3][2];
+        ladoNaranja_Cara3[2][2] = ladoAzul_Cara6[2][2];
+        ladoNaranja_Cara3[2][3] = ladoAzul_Cara6[1][2];
+
+        // Números. Lado Azul y Variable Temporal
+        ladoAzul_Cara6[3][2] = temporal1;
+        ladoAzul_Cara6[2][2] = temporal2;
+        ladoAzul_Cara6[1][2] = temporal3;
+
+        // Colores. Lado Rojo y Verde
+        color_ladoRojo_Cara1[2][3] = color_ladoVerde_Cara5[1][2];
+        color_ladoRojo_Cara1[2][2] = color_ladoVerde_Cara5[2][2];
+        color_ladoRojo_Cara1[2][1] = color_ladoVerde_Cara5[3][2];
+
+        // Colores. Lado Verde y Naranja
+        color_ladoVerde_Cara5[3][2] = color_ladoNaranja_Cara3[2][3];
+        color_ladoVerde_Cara5[2][2] = color_ladoNaranja_Cara3[2][2];
+        color_ladoVerde_Cara5[1][2] = color_ladoNaranja_Cara3[2][1];
+
+        // Colores. Lado Naranja y Azul
+        color_ladoNaranja_Cara3[2][1] = color_ladoAzul_Cara6[3][2];
+        color_ladoNaranja_Cara3[2][2] = color_ladoAzul_Cara6[2][2];
+        color_ladoNaranja_Cara3[2][3] = color_ladoAzul_Cara6[1][2];
+
+        // Colores. Lado Azul y Variable Temporal
+        color_ladoAzul_Cara6[3][2] = color_temporal1;
+        color_ladoAzul_Cara6[2][2] = color_temporal2;
+        color_ladoAzul_Cara6[1][2] = color_temporal3;
+
         activarContadores();
     } // Fin del método Movimiento RD2  
 
     public void movimientoRD3() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][1];
-            Color color_temporal = color_ladoVerde_Cara5[i][1];
+        int temporal1 = ladoRojo_Cara1[1][3];
+        int temporal2 = ladoRojo_Cara1[1][2];
+        int temporal3 = ladoRojo_Cara1[1][1];
 
-            // Números
-            ladoVerde_Cara5[i][1] = ladoNaranja_Cara3[3][i];
-            ladoNaranja_Cara3[3][i] = ladoAzul_Cara6[i][3];
-            ladoAzul_Cara6[i][3] = ladoRojo_Cara1[1][i];
-            ladoRojo_Cara1[1][i] = temporal;
+        Color color_temporal1 = color_ladoRojo_Cara1[1][3];
+        Color color_temporal2 = color_ladoRojo_Cara1[1][2];
+        Color color_temporal3 = color_ladoRojo_Cara1[1][1];
 
-            // Color
-            color_ladoVerde_Cara5[i][1] = color_ladoNaranja_Cara3[3][i];
-            color_ladoNaranja_Cara3[3][i] = color_ladoAzul_Cara6[i][3];
-            color_ladoAzul_Cara6[i][3] = color_ladoRojo_Cara1[1][i];
-            color_ladoRojo_Cara1[1][i] = color_temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Verde
+        ladoRojo_Cara1[1][3] = ladoVerde_Cara5[1][1];
+        ladoRojo_Cara1[1][2] = ladoVerde_Cara5[2][1];
+        ladoRojo_Cara1[1][1] = ladoVerde_Cara5[3][1];
+
+        // Números. Lado Verde y Naranja
+        ladoVerde_Cara5[3][1] = ladoNaranja_Cara3[3][3];
+        ladoVerde_Cara5[2][1] = ladoNaranja_Cara3[3][2];
+        ladoVerde_Cara5[1][1] = ladoNaranja_Cara3[3][1];
+
+        // Números. Lado Naranja y Azul
+        ladoNaranja_Cara3[3][1] = ladoAzul_Cara6[3][3];
+        ladoNaranja_Cara3[3][2] = ladoAzul_Cara6[2][3];
+        ladoNaranja_Cara3[3][3] = ladoAzul_Cara6[1][3];
+
+        // Números. Lado Azul y Variable Temporal
+        ladoAzul_Cara6[3][3] = temporal1;
+        ladoAzul_Cara6[2][3] = temporal2;
+        ladoAzul_Cara6[1][3] = temporal3;
+
+        // Colores. Lado Rojo y Verde
+        color_ladoRojo_Cara1[1][3] = color_ladoVerde_Cara5[1][1];
+        color_ladoRojo_Cara1[1][2] = color_ladoVerde_Cara5[2][1];
+        color_ladoRojo_Cara1[1][1] = color_ladoVerde_Cara5[3][1];
+
+        // Colores. Lado Verde y Naranja
+        color_ladoVerde_Cara5[3][1] = color_ladoNaranja_Cara3[3][3];
+        color_ladoVerde_Cara5[2][1] = color_ladoNaranja_Cara3[3][2];
+        color_ladoVerde_Cara5[1][1] = color_ladoNaranja_Cara3[3][1];
+
+        // Colores. Lado Naranja y Azul
+        color_ladoNaranja_Cara3[3][1] = color_ladoAzul_Cara6[3][3];
+        color_ladoNaranja_Cara3[3][2] = color_ladoAzul_Cara6[2][3];
+        color_ladoNaranja_Cara3[3][3] = color_ladoAzul_Cara6[1][3];
+
+        // Colores. Lado Azul y Variable Temporal
+        color_ladoAzul_Cara6[3][3] = color_temporal1;
+        color_ladoAzul_Cara6[2][3] = color_temporal2;
+        color_ladoAzul_Cara6[1][3] = color_temporal3;
 
         rotacionInferiorCara3_MovimientosRD();
         activarContadores();
@@ -972,6 +1223,22 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoAmarillo_Cara2[2][1] = ladoAmarillo_Cara2[1][2];
         ladoAmarillo_Cara2[1][2] = variableTemporal2;
 
+        // Colores
+        Color color_variableTemporal = color_ladoAmarillo_Cara2[1][1];
+        Color color_variableTemporal2 = color_ladoAmarillo_Cara2[2][3];
+
+        // Aristas
+        color_ladoAmarillo_Cara2[1][1] = color_ladoAmarillo_Cara2[1][3];
+        color_ladoAmarillo_Cara2[1][3] = color_ladoAmarillo_Cara2[3][3];
+        color_ladoAmarillo_Cara2[3][3] = color_ladoAmarillo_Cara2[3][1];
+        color_ladoAmarillo_Cara2[3][1] = color_variableTemporal;
+
+        // Centros
+        color_ladoAmarillo_Cara2[2][3] = color_ladoAmarillo_Cara2[3][2];
+        color_ladoAmarillo_Cara2[3][2] = color_ladoAmarillo_Cara2[2][1];
+        color_ladoAmarillo_Cara2[2][1] = color_ladoAmarillo_Cara2[1][2];
+        color_ladoAmarillo_Cara2[1][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionSuperiorCara1_MovimientosRI Rojo
 
@@ -991,69 +1258,178 @@ public class CuboGUI extends javax.swing.JFrame {
         ladoBlanco_Cara4[2][3] = ladoBlanco_Cara4[1][2];
         ladoBlanco_Cara4[1][2] = variableTemporal2;
 
+        // Colores
+        Color color_variableTemporal = color_ladoBlanco_Cara4[1][3];
+        Color color_variableTemporal2 = color_ladoBlanco_Cara4[2][1];
+
+        // Aristas
+        color_ladoBlanco_Cara4[1][3] = color_ladoBlanco_Cara4[1][1];
+        color_ladoBlanco_Cara4[1][1] = color_ladoBlanco_Cara4[3][1];
+        color_ladoBlanco_Cara4[3][1] = color_ladoBlanco_Cara4[3][3];
+        color_ladoBlanco_Cara4[3][3] = color_variableTemporal;
+
+        // Centros
+        color_ladoBlanco_Cara4[2][1] = color_ladoBlanco_Cara4[3][2];
+        color_ladoBlanco_Cara4[3][2] = color_ladoBlanco_Cara4[2][3];
+        color_ladoBlanco_Cara4[2][3] = color_ladoBlanco_Cara4[1][2];
+        color_ladoBlanco_Cara4[1][2] = color_variableTemporal2;
+
         activarContadores();
     } // Fin del método rotacionInferiorCara3_MovimientosRI Naranja    
 
     public void movimientoRI1() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][3];
-            Color color_temporal = color_ladoVerde_Cara5[i][3];
+        int temporal1 = ladoRojo_Cara1[3][1];
+        int temporal2 = ladoRojo_Cara1[3][2];
+        int temporal3 = ladoRojo_Cara1[3][3];
 
-            // Números
-            ladoVerde_Cara5[i][3] = ladoRojo_Cara1[3][i];
-            ladoRojo_Cara1[3][i] = ladoAzul_Cara6[i][1];
-            ladoAzul_Cara6[i][1] = ladoNaranja_Cara3[1][i];
-            ladoNaranja_Cara3[1][i] = temporal;
+        Color color_temporal1 = color_ladoRojo_Cara1[3][1];
+        Color color_temporal2 = color_ladoRojo_Cara1[3][2];
+        Color color_temporal3 = color_ladoRojo_Cara1[3][3];
 
-            // Color
-            color_ladoVerde_Cara5[i][3] = color_ladoRojo_Cara1[3][i];
-            color_ladoRojo_Cara1[3][i] = color_ladoAzul_Cara6[i][1];
-            color_ladoAzul_Cara6[i][1] = color_ladoNaranja_Cara3[1][i];
-            color_ladoNaranja_Cara3[1][i] = color_temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Azul
+        ladoRojo_Cara1[3][1] = ladoAzul_Cara6[1][1];
+        ladoRojo_Cara1[3][2] = ladoAzul_Cara6[2][1];
+        ladoRojo_Cara1[3][3] = ladoAzul_Cara6[3][1];
+
+        // Números. Lado Azul y Naranja
+        ladoAzul_Cara6[1][1] = ladoNaranja_Cara3[1][3];
+        ladoAzul_Cara6[2][1] = ladoNaranja_Cara3[1][2];
+        ladoAzul_Cara6[3][1] = ladoNaranja_Cara3[1][1];
+
+        // Números. Lado Naranja y Verde
+        ladoNaranja_Cara3[1][3] = ladoVerde_Cara5[3][3];
+        ladoNaranja_Cara3[1][2] = ladoVerde_Cara5[2][3];
+        ladoNaranja_Cara3[1][1] = ladoVerde_Cara5[1][3];
+
+        // Números. Lado Verde y Variable Temporal
+        ladoVerde_Cara5[3][3] = temporal1;
+        ladoVerde_Cara5[2][3] = temporal2;
+        ladoVerde_Cara5[1][3] = temporal3;
+
+        // Colores. Lado Rojo y Azul
+        color_ladoRojo_Cara1[3][1] = color_ladoAzul_Cara6[1][1];
+        color_ladoRojo_Cara1[3][2] = color_ladoAzul_Cara6[2][1];
+        color_ladoRojo_Cara1[3][3] = color_ladoAzul_Cara6[3][1];
+
+        // Colores. Lado Azul y Naranja
+        color_ladoAzul_Cara6[1][1] = color_ladoNaranja_Cara3[1][3];
+        color_ladoAzul_Cara6[2][1] = color_ladoNaranja_Cara3[1][2];
+        color_ladoAzul_Cara6[3][1] = color_ladoNaranja_Cara3[1][1];
+
+        // Colores. Lado Naranja y Verde
+        color_ladoNaranja_Cara3[1][3] = color_ladoVerde_Cara5[3][3];
+        color_ladoNaranja_Cara3[1][2] = color_ladoVerde_Cara5[2][3];
+        color_ladoNaranja_Cara3[1][1] = color_ladoVerde_Cara5[1][3];
+
+        // Colores. Lado Verde y Variable Temporal
+        color_ladoVerde_Cara5[3][3] = color_temporal1;
+        color_ladoVerde_Cara5[2][3] = color_temporal2;
+        color_ladoVerde_Cara5[1][3] = color_temporal3;
 
         rotacionSuperiorCara1_MovimientosRI();
         activarContadores();
     } // Fin del método MovimientoI1
 
     public void movimientoRI2() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][2];
-            Color color_temporal = color_ladoVerde_Cara5[i][2];
+        int temporal1 = ladoRojo_Cara1[2][1];
+        int temporal2 = ladoRojo_Cara1[2][2];
+        int temporal3 = ladoRojo_Cara1[2][3];
 
-            // Números
-            ladoVerde_Cara5[i][2] = ladoRojo_Cara1[2][i];
-            ladoRojo_Cara1[2][i] = ladoAzul_Cara6[i][2];
-            ladoAzul_Cara6[i][2] = ladoNaranja_Cara3[2][i];
-            ladoNaranja_Cara3[2][i] = temporal;
+        Color color_temporal1 = color_ladoRojo_Cara1[2][1];
+        Color color_temporal2 = color_ladoRojo_Cara1[2][2];
+        Color color_temporal3 = color_ladoRojo_Cara1[2][3];
 
-            // Color
-            color_ladoVerde_Cara5[i][2] = color_ladoRojo_Cara1[2][i];
-            color_ladoRojo_Cara1[2][i] = color_ladoAzul_Cara6[i][2];
-            color_ladoAzul_Cara6[i][2] = color_ladoNaranja_Cara3[2][i];
-            color_ladoNaranja_Cara3[2][i] = color_temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Azul
+        ladoRojo_Cara1[2][1] = ladoAzul_Cara6[1][2];
+        ladoRojo_Cara1[2][2] = ladoAzul_Cara6[2][2];
+        ladoRojo_Cara1[2][3] = ladoAzul_Cara6[3][2];
+
+        // Números. Lado Azul y Naranja
+        ladoAzul_Cara6[1][2] = ladoNaranja_Cara3[2][3];
+        ladoAzul_Cara6[2][2] = ladoNaranja_Cara3[2][2];
+        ladoAzul_Cara6[3][2] = ladoNaranja_Cara3[2][1];
+
+        // Números. Lado Naranja y Verde
+        ladoNaranja_Cara3[2][3] = ladoVerde_Cara5[3][2];
+        ladoNaranja_Cara3[2][2] = ladoVerde_Cara5[2][2];
+        ladoNaranja_Cara3[2][1] = ladoVerde_Cara5[1][2];
+
+        // Números. Lado Verde y Variable Temporal
+        ladoVerde_Cara5[3][2] = temporal1;
+        ladoVerde_Cara5[2][2] = temporal2;
+        ladoVerde_Cara5[1][2] = temporal3;
+
+        // Colores. Lado Rojo y Azul
+        color_ladoRojo_Cara1[2][1] = color_ladoAzul_Cara6[1][2];
+        color_ladoRojo_Cara1[2][2] = color_ladoAzul_Cara6[2][2];
+        color_ladoRojo_Cara1[2][3] = color_ladoAzul_Cara6[3][2];
+
+        // Colores. Lado Azul y Naranja
+        color_ladoAzul_Cara6[1][2] = color_ladoNaranja_Cara3[2][3];
+        color_ladoAzul_Cara6[2][2] = color_ladoNaranja_Cara3[2][2];
+        color_ladoAzul_Cara6[3][2] = color_ladoNaranja_Cara3[2][1];
+
+        // Colores. Lado Naranja y Verde
+        color_ladoNaranja_Cara3[2][3] = color_ladoVerde_Cara5[3][2];
+        color_ladoNaranja_Cara3[2][2] = color_ladoVerde_Cara5[2][2];
+        color_ladoNaranja_Cara3[2][1] = color_ladoVerde_Cara5[1][2];
+
+        // Colores. Lado Verde y Variable Temporal
+        color_ladoVerde_Cara5[3][2] = color_temporal1;
+        color_ladoVerde_Cara5[2][2] = color_temporal2;
+        color_ladoVerde_Cara5[1][2] = color_temporal3;
 
         activarContadores();
     } // Fin del método MovimientoRI2
 
     public void movimientoRI3() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][1];
-            Color color_temporal = color_ladoVerde_Cara5[i][1];
+        int temporal1 = ladoRojo_Cara1[1][1];
+        int temporal2 = ladoRojo_Cara1[1][2];
+        int temporal3 = ladoRojo_Cara1[1][3];
 
-            // Números
-            ladoVerde_Cara5[i][1] = ladoRojo_Cara1[1][i];
-            ladoRojo_Cara1[1][i] = ladoAzul_Cara6[i][3];
-            ladoAzul_Cara6[i][3] = ladoNaranja_Cara3[3][i];
-            ladoNaranja_Cara3[3][i] = temporal;
+        Color color_temporal1 = color_ladoRojo_Cara1[1][1];
+        Color color_temporal2 = color_ladoRojo_Cara1[1][2];
+        Color color_temporal3 = color_ladoRojo_Cara1[1][3];
 
-            // Color
-            color_ladoVerde_Cara5[i][1] = color_ladoRojo_Cara1[1][i];
-            color_ladoRojo_Cara1[1][i] = color_ladoAzul_Cara6[i][3];
-            color_ladoAzul_Cara6[i][3] = color_ladoNaranja_Cara3[3][i];
-            color_ladoNaranja_Cara3[3][i] = color_temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Azul
+        ladoRojo_Cara1[1][1] = ladoAzul_Cara6[1][3];
+        ladoRojo_Cara1[1][2] = ladoAzul_Cara6[2][3];
+        ladoRojo_Cara1[1][3] = ladoAzul_Cara6[3][3];
+
+        // Números. Lado Azul y Naranja
+        ladoAzul_Cara6[1][3] = ladoNaranja_Cara3[3][3];
+        ladoAzul_Cara6[2][3] = ladoNaranja_Cara3[3][2];
+        ladoAzul_Cara6[3][3] = ladoNaranja_Cara3[3][1];
+
+        // Números. Lado Naranja y Verde
+        ladoNaranja_Cara3[3][3] = ladoVerde_Cara5[3][1];
+        ladoNaranja_Cara3[3][2] = ladoVerde_Cara5[2][1];
+        ladoNaranja_Cara3[3][1] = ladoVerde_Cara5[1][1];
+
+        // Números. Lado Verde y Variable Temporal
+        ladoVerde_Cara5[3][1] = temporal1;
+        ladoVerde_Cara5[2][1] = temporal2;
+        ladoVerde_Cara5[1][1] = temporal3;
+
+        // Colores. Lado Rojo y Azul
+        color_ladoRojo_Cara1[1][1] = color_ladoAzul_Cara6[1][3];
+        color_ladoRojo_Cara1[1][2] = color_ladoAzul_Cara6[2][3];
+        color_ladoRojo_Cara1[1][3] = color_ladoAzul_Cara6[3][3];
+
+        // Colores. Lado Azul y Naranja
+        color_ladoAzul_Cara6[1][3] = color_ladoNaranja_Cara3[3][3];
+        color_ladoAzul_Cara6[2][3] = color_ladoNaranja_Cara3[3][2];
+        color_ladoAzul_Cara6[3][3] = color_ladoNaranja_Cara3[3][1];
+
+        // Colores. Lado Naranja y Verde
+        color_ladoNaranja_Cara3[3][3] = color_ladoVerde_Cara5[3][1];
+        color_ladoNaranja_Cara3[3][2] = color_ladoVerde_Cara5[2][1];
+        color_ladoNaranja_Cara3[3][1] = color_ladoVerde_Cara5[1][1];
+
+        // Colores. Lado Verde y Variable Temporal
+        color_ladoVerde_Cara5[3][1] = color_temporal1;
+        color_ladoVerde_Cara5[2][1] = color_temporal2;
+        color_ladoVerde_Cara5[1][1] = color_temporal3;
 
         rotacionInferiorCara3_MovimientosRI();
         activarContadores();

@@ -81,12 +81,14 @@ public class Lados {
         ladoVerde_Cara5[3][2] = ladoVerde_Cara5[2][1];
         ladoVerde_Cara5[2][1] = ladoVerde_Cara5[1][2];
         ladoVerde_Cara5[1][2] = variableTemporal2;
+
     } // Fin del método rotacionDerechaCara5 Verde
 
     public void movimientoA1() {
         for (int i = 1; i <= 3; i++) {
             int temporal = ladoRojo_Cara1[i][1];
 
+            // Números
             ladoRojo_Cara1[i][1] = ladoAmarillo_Cara2[i][1];
             ladoAmarillo_Cara2[i][1] = ladoNaranja_Cara3[i][1];
             ladoNaranja_Cara3[i][1] = ladoBlanco_Cara4[i][1];
@@ -100,6 +102,7 @@ public class Lados {
         for (int i = 1; i <= 3; i++) {
             int temporal = ladoRojo_Cara1[i][2];
 
+            // Números
             ladoRojo_Cara1[i][2] = ladoAmarillo_Cara2[i][2];
             ladoAmarillo_Cara2[i][2] = ladoNaranja_Cara3[i][2];
             ladoNaranja_Cara3[i][2] = ladoBlanco_Cara4[i][2];
@@ -174,7 +177,7 @@ public class Lados {
     public void movimientoB2() {
         for (int i = 1; i <= 3; i++) {
             int temporal = ladoRojo_Cara1[i][2];
-            
+
             // Números
             ladoRojo_Cara1[i][2] = ladoBlanco_Cara4[i][2];
             ladoBlanco_Cara4[i][2] = ladoNaranja_Cara3[i][2];
@@ -386,41 +389,84 @@ public class Lados {
     } // Fin del método rotacionInferiorCara3_MovimientosRD Naranja
 
     public void movimientoRD1() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][3];
+        int temporal1 = ladoRojo_Cara1[3][3];
+        int temporal2 = ladoRojo_Cara1[3][2];
+        int temporal3 = ladoRojo_Cara1[3][1];
 
-            // Números
-            ladoVerde_Cara5[i][3] = ladoNaranja_Cara3[1][i];
-            ladoNaranja_Cara3[1][i] = ladoAzul_Cara6[i][1];
-            ladoAzul_Cara6[i][1] = ladoRojo_Cara1[3][i];
-            ladoRojo_Cara1[3][i] = temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Verde
+        ladoRojo_Cara1[3][3] = ladoVerde_Cara5[1][3];
+        ladoRojo_Cara1[3][2] = ladoVerde_Cara5[2][3];
+        ladoRojo_Cara1[3][1] = ladoVerde_Cara5[3][3];
+
+        // Números. Lado Verde y Naranja
+        ladoVerde_Cara5[3][3] = ladoNaranja_Cara3[1][3];
+        ladoVerde_Cara5[2][3] = ladoNaranja_Cara3[1][2];
+        ladoVerde_Cara5[1][3] = ladoNaranja_Cara3[1][1];
+
+        // Números. Lado Naranja y Azul
+        ladoNaranja_Cara3[1][1] = ladoAzul_Cara6[3][1];
+        ladoNaranja_Cara3[1][2] = ladoAzul_Cara6[2][1];
+        ladoNaranja_Cara3[1][3] = ladoAzul_Cara6[1][1];
+
+        // Números. Lado Azul y Variable Temporal
+        ladoAzul_Cara6[3][1] = temporal1;
+        ladoAzul_Cara6[2][1] = temporal2;
+        ladoAzul_Cara6[1][1] = temporal3;
 
         rotacionSuperiorCara1_MovimientosRD();
     } // Fin de los movimientos RD1
 
     public void movimientoRD2() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][2];
+        int temporal1 = ladoRojo_Cara1[2][3];
+        int temporal2 = ladoRojo_Cara1[2][2];
+        int temporal3 = ladoRojo_Cara1[2][1];
 
-            // Números
-            ladoVerde_Cara5[i][2] = ladoNaranja_Cara3[2][i];
-            ladoNaranja_Cara3[2][i] = ladoAzul_Cara6[i][2];
-            ladoAzul_Cara6[i][2] = ladoRojo_Cara1[2][i];
-            ladoRojo_Cara1[2][i] = temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Verde
+        ladoRojo_Cara1[2][3] = ladoVerde_Cara5[1][2];
+        ladoRojo_Cara1[2][2] = ladoVerde_Cara5[2][2];
+        ladoRojo_Cara1[2][1] = ladoVerde_Cara5[3][2];
+
+        // Números. Lado Verde y Naranja
+        ladoVerde_Cara5[3][2] = ladoNaranja_Cara3[2][3];
+        ladoVerde_Cara5[2][2] = ladoNaranja_Cara3[2][2];
+        ladoVerde_Cara5[1][2] = ladoNaranja_Cara3[2][1];
+
+        // Números. Lado Naranja y Azul
+        ladoNaranja_Cara3[2][1] = ladoAzul_Cara6[3][2];
+        ladoNaranja_Cara3[2][2] = ladoAzul_Cara6[2][2];
+        ladoNaranja_Cara3[2][3] = ladoAzul_Cara6[1][2];
+
+        // Números. Lado Azul y Variable Temporal
+        ladoAzul_Cara6[3][2] = temporal1;
+        ladoAzul_Cara6[2][2] = temporal2;
+        ladoAzul_Cara6[1][2] = temporal3;
+
     } // Fin del método Movimiento RD2  
 
     public void movimientoRD3() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][1];
-            
-            // Números
-            ladoVerde_Cara5[i][1] = ladoNaranja_Cara3[3][i];
-            ladoNaranja_Cara3[3][i] = ladoAzul_Cara6[i][3];
-            ladoAzul_Cara6[i][3] = ladoRojo_Cara1[1][i];
-            ladoRojo_Cara1[1][i] = temporal;
-        } // Fin del for
+        int temporal1 = ladoRojo_Cara1[1][3];
+        int temporal2 = ladoRojo_Cara1[1][2];
+        int temporal3 = ladoRojo_Cara1[1][1];
+
+        // Números. Lado Rojo y Verde
+        ladoRojo_Cara1[1][3] = ladoVerde_Cara5[1][1];
+        ladoRojo_Cara1[1][2] = ladoVerde_Cara5[2][1];
+        ladoRojo_Cara1[1][1] = ladoVerde_Cara5[3][1];
+
+        // Números. Lado Verde y Naranja
+        ladoVerde_Cara5[3][1] = ladoNaranja_Cara3[3][3];
+        ladoVerde_Cara5[2][1] = ladoNaranja_Cara3[3][2];
+        ladoVerde_Cara5[1][1] = ladoNaranja_Cara3[3][1];
+
+        // Números. Lado Naranja y Azul
+        ladoNaranja_Cara3[3][1] = ladoAzul_Cara6[3][3];
+        ladoNaranja_Cara3[3][2] = ladoAzul_Cara6[2][3];
+        ladoNaranja_Cara3[3][3] = ladoAzul_Cara6[1][3];
+
+        // Números. Lado Azul y Variable Temporal
+        ladoAzul_Cara6[3][3] = temporal1;
+        ladoAzul_Cara6[2][3] = temporal2;
+        ladoAzul_Cara6[1][3] = temporal3;
 
         rotacionInferiorCara3_MovimientosRD();
     } // Fin del método Movimiento RD3
@@ -442,6 +488,7 @@ public class Lados {
         ladoAmarillo_Cara2[3][2] = ladoAmarillo_Cara2[2][1];
         ladoAmarillo_Cara2[2][1] = ladoAmarillo_Cara2[1][2];
         ladoAmarillo_Cara2[1][2] = variableTemporal2;
+
     } // Fin del método rotacionSuperiorCara1_MovimientosRI Rojo
 
     public void rotacionInferiorCara3_MovimientosRI() {
@@ -459,44 +506,88 @@ public class Lados {
         ladoBlanco_Cara4[3][2] = ladoBlanco_Cara4[2][3];
         ladoBlanco_Cara4[2][3] = ladoBlanco_Cara4[1][2];
         ladoBlanco_Cara4[1][2] = variableTemporal2;
+
     } // Fin del método rotacionInferiorCara3_MovimientosRI Naranja    
 
     public void movimientoRI1() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][3];
+        int temporal1 = ladoRojo_Cara1[3][1];
+        int temporal2 = ladoRojo_Cara1[3][2];
+        int temporal3 = ladoRojo_Cara1[3][3];
 
-            // Números
-            ladoVerde_Cara5[i][3] = ladoRojo_Cara1[3][i];
-            ladoRojo_Cara1[3][i] = ladoAzul_Cara6[i][1];
-            ladoAzul_Cara6[i][1] = ladoNaranja_Cara3[1][i];
-            ladoNaranja_Cara3[1][i] = temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Azul
+        ladoRojo_Cara1[3][1] = ladoAzul_Cara6[1][1];
+        ladoRojo_Cara1[3][2] = ladoAzul_Cara6[2][1];
+        ladoRojo_Cara1[3][3] = ladoAzul_Cara6[3][1];
+
+        // Números. Lado Azul y Naranja
+        ladoAzul_Cara6[1][1] = ladoNaranja_Cara3[1][3];
+        ladoAzul_Cara6[2][1] = ladoNaranja_Cara3[1][2];
+        ladoAzul_Cara6[3][1] = ladoNaranja_Cara3[1][1];
+
+        // Números. Lado Naranja y Verde
+        ladoNaranja_Cara3[1][3] = ladoVerde_Cara5[3][3];
+        ladoNaranja_Cara3[1][2] = ladoVerde_Cara5[2][3];
+        ladoNaranja_Cara3[1][1] = ladoVerde_Cara5[1][3];
+
+        // Números. Lado Verde y Variable Temporal
+        ladoVerde_Cara5[3][3] = temporal1;
+        ladoVerde_Cara5[2][3] = temporal2;
+        ladoVerde_Cara5[1][3] = temporal3;
 
         rotacionSuperiorCara1_MovimientosRI();
     } // Fin del método MovimientoI1
 
     public void movimientoRI2() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][2];
+        int temporal1 = ladoRojo_Cara1[2][1];
+        int temporal2 = ladoRojo_Cara1[2][2];
+        int temporal3 = ladoRojo_Cara1[2][3];
 
-            // Números
-            ladoVerde_Cara5[i][2] = ladoRojo_Cara1[2][i];
-            ladoRojo_Cara1[2][i] = ladoAzul_Cara6[i][2];
-            ladoAzul_Cara6[i][2] = ladoNaranja_Cara3[2][i];
-            ladoNaranja_Cara3[2][i] = temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Azul
+        ladoRojo_Cara1[2][1] = ladoAzul_Cara6[1][2];
+        ladoRojo_Cara1[2][2] = ladoAzul_Cara6[2][2];
+        ladoRojo_Cara1[2][3] = ladoAzul_Cara6[3][2];
+
+        // Números. Lado Azul y Naranja
+        ladoAzul_Cara6[1][2] = ladoNaranja_Cara3[2][3];
+        ladoAzul_Cara6[2][2] = ladoNaranja_Cara3[2][2];
+        ladoAzul_Cara6[3][2] = ladoNaranja_Cara3[2][1];
+
+        // Números. Lado Naranja y Verde
+        ladoNaranja_Cara3[2][3] = ladoVerde_Cara5[3][2];
+        ladoNaranja_Cara3[2][2] = ladoVerde_Cara5[2][2];
+        ladoNaranja_Cara3[2][1] = ladoVerde_Cara5[1][2];
+
+        // Números. Lado Verde y Variable Temporal
+        ladoVerde_Cara5[3][2] = temporal1;
+        ladoVerde_Cara5[2][2] = temporal2;
+        ladoVerde_Cara5[1][2] = temporal3;
+
     } // Fin del método MovimientoRI2
 
     public void movimientoRI3() {
-        for (int i = 1; i <= 3; i++) {
-            int temporal = ladoVerde_Cara5[i][1];
+        int temporal1 = ladoRojo_Cara1[1][1];
+        int temporal2 = ladoRojo_Cara1[1][2];
+        int temporal3 = ladoRojo_Cara1[1][3];
 
-            // Números
-            ladoVerde_Cara5[i][1] = ladoRojo_Cara1[1][i];
-            ladoRojo_Cara1[1][i] = ladoAzul_Cara6[i][3];
-            ladoAzul_Cara6[i][3] = ladoNaranja_Cara3[3][i];
-            ladoNaranja_Cara3[3][i] = temporal;
-        } // Fin del for
+        // Números. Lado Rojo y Azul
+        ladoRojo_Cara1[1][1] = ladoAzul_Cara6[1][3];
+        ladoRojo_Cara1[1][2] = ladoAzul_Cara6[2][3];
+        ladoRojo_Cara1[1][3] = ladoAzul_Cara6[3][3];
+
+        // Números. Lado Azul y Naranja
+        ladoAzul_Cara6[1][3] = ladoNaranja_Cara3[3][3];
+        ladoAzul_Cara6[2][3] = ladoNaranja_Cara3[3][2];
+        ladoAzul_Cara6[3][3] = ladoNaranja_Cara3[3][1];
+
+        // Números. Lado Naranja y Verde
+        ladoNaranja_Cara3[3][3] = ladoVerde_Cara5[3][1];
+        ladoNaranja_Cara3[3][2] = ladoVerde_Cara5[2][1];
+        ladoNaranja_Cara3[3][1] = ladoVerde_Cara5[1][1];
+
+        // Números. Lado Verde y Variable Temporal
+        ladoVerde_Cara5[3][1] = temporal1;
+        ladoVerde_Cara5[2][1] = temporal2;
+        ladoVerde_Cara5[1][1] = temporal3;
 
         rotacionInferiorCara3_MovimientosRI();
     } // Fin del método MovimientoRI3
@@ -536,7 +627,7 @@ public class Lados {
                 case 4:
                     imprimirCubo();
                     break;
-                    
+
                 default:
                     System.out.println("Error! La opción ingresada no existe!");
                     break;
@@ -554,7 +645,7 @@ public class Lados {
 
             switch (respuesta) {
                 case 0:
-                    break OUTER;  
+                    break OUTER;
 
                 case 1:
                     movimientoB1();
@@ -574,10 +665,10 @@ public class Lados {
                 case 4:
                     imprimirCubo();
                     break;
-                    
+
                 case 5:
                     opciones_Categoria();
-                    break;     
+                    break;
 
                 default:
                     System.out.println("Error! La opción ingresada no existe!");
@@ -615,7 +706,7 @@ public class Lados {
 
                 case 4:
                     imprimirCubo();
-                    break;  
+                    break;
 
                 default:
                     System.out.println("Error! La opción ingresada no existe!");
@@ -654,10 +745,10 @@ public class Lados {
                 case 4:
                     imprimirCubo();
                     break;
-                
+
                 case 5:
                     opciones_Categoria();
-                    break;        
+                    break;
 
                 default:
                     System.out.println("Error! La opción ingresada no existe!");
